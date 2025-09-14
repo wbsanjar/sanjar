@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIT Bhopal - Technocrats Institute of Technology | by @code.monu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-image {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fc02b0f-e5ed-47e3-82cc-f58fa52cdf7a.png') no-repeat center center;
+            background-size: cover;
+            height: 70vh;
+        }
+        
+        .notice-item {
+            transition: all 0.3s ease;
+        }
+        
+        .notice-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .marquee {
+            animation: scroll 20s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header with Navigation -->
+    <header class="bg-blue-900 text-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b60fb4bc-b9f3-4196-a86d-3b48fbcb007f.png" alt="TIT Bhopal logo with shield emblem in gold and blue colors" class="h-12">
+                <div>
+                    <h1 class="text-xl font-bold">Technocrats Institute of Technology</h1>
+                    <p class="text-xs opacity-80">TIT Bhopal, Madhya Pradesh</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-200 font-medium">Home</a>
+                <a href="#about" class="hover:text-blue-200 font-medium">About</a>
+                <a href="#departments" class="hover:text-blue-200 font-medium">Departments</a>
+                <a href="#codexperience" class="hover:text-blue-200 font-medium">CodeXperience Lab</a>
+                <a href="#login" class="hover:text-blue-200 font-medium">Student Login</a>
+                <a href="#notice" class="hover:text-blue-200 font-medium">Notices</a>
+                <a href="#library" class="hover:text-blue-200 font-medium">Library</a>
+                <a href="#contact" class="hover:text-blue-200 font-medium">Contact</a>
+            </nav>
+            <button class="md:hidden text-xl" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-blue-800 w-full" id="mobileMenu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="py-2 hover:text-blue-200">Home</a>
+                <a href="#about" class="py-2 hover:text-blue-200">About</a>
+                <a href="#departments" class="py-2 hover:text-blue-200">Departments</a>
+                <a href="#codexperience" class="py-2 hover:text-blue-200">CodeXperience Lab</a>
+                <a href="#login" class="py-2 hover:text-blue-200">Student Login</a>
+                <a href="#notice" class="py-2 hover:text-blue-200">Notices</a>
+                <a href="#library" class="py-2 hover:text-blue-200">Library</a>
+                <a href="#contact" class="py-2 hover:text-blue-200">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image pt-32 flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Technocrats Institute of Technology</h1>
+            <p class="text-xl md:text-2xl mb-8">Excellence in Engineering & Technology Education</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#notice" class="bg-bluea00 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all">
+                    View Latest Notices
+                </a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-blue-900 px-6 py-3 rounded-lg font-medium transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="bg-blue-800 text-white py-2 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex whitespace-nowrap items-center">
+                <span class="font-bold mr-4">Latest Notice: </span>
+                <div class="marquee">
+                    <span>Admissions open for 2023-24 academic year - Last date to apply: June 30, 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">About TIT Bhopal</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b3018260-4ec2-4504-912f-0ebc53106c59.png" alt="Panoramic view of TIT Bhopal campus showing modern buildings and green spaces" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4 text-gray-700">
+                        Established in 1997, Technocrats Institute of Technology (TIT) Bhopal is one of the premier engineering colleges in Madhya Pradesh, affiliated to Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV).
+                    </p>
+                    <p class="text-lg mb-6 text-gray-700">
+                        Our institute offers UG and PG programs in various engineering disciplines with state-of-the-art infrastructure, experienced faculty, and excellent placement records.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-blue-900">20+ Years</h3>
+                            <p class="text-gray-600">of excellence</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-blue-900">5000+</h3>
+                            <p class="text-gray-600">Alumni</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-blue-900">15+</h3>
+                            <p class="text-gray-600">Courses</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-blue-900">80%+</h3>
+                            <p class="text-gray-600">Placement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Our Departments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Computer Science</h3>
+                    <p class="text-gray-600">B.Tech, M.Tech programs with AI/ML specialization.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Electrical</h3>
+                    <p class="text-gray-600">Power systems and control engineering programs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Mechanical</h3>
+                    <p class="text-gray-600">Design, thermal and production engineering.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+                    <div class="text-blue-900 text-4xl mb-4">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Civil</h3>
+                    <p class="text-gray-600">Structural and environmental engineering programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CodeXperience Lab Section -->
+    <section id="codexperience" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex flex-col items-center mb-4">
+                    <h2 class="text-3xl font-bold text-blue-900 mb-2">Capgemini CodeXperience Lab</h2>
+                    <div class="flex items-center justify-center space-x-2">
+                        <span class="text-gray-600">Powered by</span>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b5f97485-3901-476a-b18c-5394616f240a.png" alt="Capgemini India" class="h-8">
+                    </div>
+                </div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Advanced technology lab providing hands-on training in AI, cloud computing and modern software development</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="relative">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fd31dc46-4231-4936-b4b3-f1d76370dc1b.png" alt="Modern CodeXperience lab interior with students working on computers" class="rounded-lg shadow-lg w-full">
+                        <div class="absolute bottom-4 left-4 bg-white bg-opacity-90 p-3 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48b52fb0-e730-4dcc-b899-0fc519d27498.png" alt="Capgemini logo" class="h-8 mr-2">
+                                <span class="font-medium text-blue-900">India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Transformative Learning Experience</h3>
+                    <div class="mb-6 flex flex-col space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-laptop-code text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Cutting-Edge Technologies</h4>
+                                <p class="text-gray-600">Hands-on training in AI/ML, Cloud Computing and Full-Stack Development</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-briefcase text-blue-500 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Industry Projects</h4>
+                                <p class="text-gray-600">Work on real-world projects mentored by Capgemini experts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <h4 class="font-bold text-blue-900">500+</h4>
+                            <p class="text-gray-600">Students Trained</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg text-center">
+                            <h4 class="font-bold text-blue-900">30+</h4>
+                            <p class="text-gray-600">Industry Projects</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-blue-900 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Login Portal -->
+    <section id="login" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">Student Portal Login</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-6 text-center">Check Attendance</h3>
+                    <div class="flex flex-col space-y-4">
+                        <input type="text" placeholder="University Roll No" class="px-4 py-2 border rounded">
+                        <input type="password" placeholder="Password" class="px-4 py-2 border rounded">
+                        <button class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700">View Attendance</button>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 hover:underline">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-6 text-center">Payments & Documents</h3>
+                    <div class="flex flex-col space-y-4">
+                        <button onclick="openPaymentModal('semester')" class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-rupee-sign mr-2"></i> Semester Fees (₹45,000)
+                        </button>
+                        <button onclick="openPaymentModal('hostel')" class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-home mr-2"></i> Hostel Fees (₹25,000)
+                        </button>
+                        <button onclick="openPaymentModal('transport')" class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-bus mr-2"></i> Transport Fees (₹12,000)
+                        </button>
+                        <button onclick="openPaymentModal('uniform')" class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-tshirt mr-2"></i> Uniform Payment (₹2,800)
+                        </button>
+                        <button class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center mt-4">
+                            <i class="fas fa-id-card mr-2"></i> Download ID Card
+                        </button>
+                        <button class="bg-blue-900 text-white py-2 rounded hover:bg-blue-700 flex items-center justify-center">
+                            <i class="fas fa-file-alt mr-2"></i> Download Admit Card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notices Section -->
+    <section id="notice" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">College Notices</h2>
+            
+            <!-- Notice Filter -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="text-gray-600">
+                    Showing 5 latest notices
+                </div>
+                <div>
+                    <select class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>All Notices</option>
+                        <option>Academic</option>
+                        <option>Admissions</option>
+                        <option>Events</option>
+                        <option>Results</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Notices List -->
+            <div class="space-y-4">
+                <div class="notice-item bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-blue-900">Semester Examination Schedule - Winter 2023</h3>
+                        <span class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded">Academic</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">The schedule for winter semester examinations (December 2023) has been published. Students are advised to check...</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Posted: November 15, 2023</span>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="notice-item bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-blue-900">TechFest 2023 Registrations Open</h3>
+                        <span class="bg-green-100 text-green-800 text-sm px-2 py-1 rounded">Event</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">Annual technical festival to be held on December 20-22, 2023. Students can register for various competitions and workshops...</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Posted: November 10, 2023</span>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="notice-item bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-blue-900">New Scholarship Program Announcement</h3>
+                        <span class="bg-purple-100 text-purple-800 text-sm px-2 py-1 rounded">Scholarship</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">The MP government has announced new scholarship schemes for meritorious students. Eligible students should apply before...</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Posted: November 5, 2023</span>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="notice-item bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-blue-900">Library Timings Extended</h3>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm px-2 py-1 rounded">General</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">Central library will remain open till 10 PM during examination period from November 20 to December 30, 2023.</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Posted: October 28, 2023</span>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="notice-item bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-bold text-blue-900">Campus Recruitment Drive by Tech Mahindra</h3>
+                        <span class="bg-red-100 text-red-800 text-sm px-2 py-1 rounded">Placement</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">Tech Mahindra recruitment drive for 2024 batch on December 5, 2023. Eligible students should register on TP portal by...</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500">
+                        <span>Posted: October 20, 2023</span>
+                        <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Notices Button -->
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-blue-900 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all">
+                    View All Notices
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Library Section -->
+    <section id="library" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">Digital Library</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-book-open mr-3 text-blue-900"></i> eBooks
+                    </h3>
+                    <p class="text-gray-700 mb-4">Access our collection of 10,000+ eBooks across all engineering disciplines.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Browse Collection →</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-newspaper mr-3 text-blue-900"></i> Journals
+                    </h3>
+                    <p class="text-gray-700 mb-4">Access premium research journals and publications with your student credentials.</p>
+                    <a href="#" class="text-blue-600 hover:underline">View Journals →</a>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-search mr-3 text-blue-900"></i> Research Papers
+                    </h3>
+                    <p class="text-gray-700 mb-4">Search through our collection of research papers and theses submitted by students.</p>
+                    <a href="#" class="text-blue-600 hover:underline">Search Database →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uniform Section -->
+    <section id="uniform" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">Uniform Guidelines</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Uniform Information</h3>
+                    <ul class="list-disc pl-5 space-y-2 mb-6">
+                        <li>Uniform is compulsory for all students during college hours</li>
+                        <li>Includes 2 pairs of shirts and trousers (boys) or kurtas (girls)</li>
+                        <li>Purchase from authorized vendor in campus store</li>
+                        <li>Uniform cost: ₹2,800 (included in first semester fees)</li>
+                        <li>Replacement cost: ₹1,400 per set</li>
+                    </ul>
+                    <h3 class="text-xl font-bold mb-4">Wearing Schedule</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Monday to Friday: Full uniform mandatory</li>
+                        <li>Saturday: Formal dress (college t-shirt with dark trousers)</li>
+                        <li>Labs: Additional lab coat is required (provided separately)</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d69a110c-977c-40c3-bceb-f110a43a3076.png" alt="College uniform for male students - white shirt with navy blue trousers" class="rounded-lg shadow">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e9a28b7-a4f8-427b-83c3-310f1484996b.png" alt="College uniform for female students - white kurta with navy blue salwar" class="rounded-lg shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-blue-900 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Address</h4>
+                                    <p class="text-gray-600">Technocrats Institute of Technology, Anand Nagar, Bhopal, Madhya Pradesh 462021</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-900 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-gray-600">+91 755 1234567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-900 mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">info@titbhopal.edu.in</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-medium mb-2">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-blue-900 hover:text-blue-700 text-xl">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="text-blue-900 hover:text-blue-700 text-xl">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-blue-900 hover:text-blue-700 text-xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="text-blue-900 hover:text-blue-700 text-xl">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="text-blue-900 hover:text-blue-700 text-xl">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-900 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.5332381155074!2d77.42502131496695!3d23.216535984853086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDEyJzU5LjUiTiA3N8KwMjUnMzguOSJF!5e0!3m2!1sen!2sin!4v1623412345678!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            title="Map Location of TIT Bhopal"
+        ></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/78a08cc9-ea41-4020-a140-39c8be1ac705.png" alt="TIT Bhopal small logo" class="h-10 mr-2">
+                        <h3 class="text-xl font-bold">TIT Bhopal</h3>
+                    </div>
+                    <p class="text-blue-200 max-w-xs">
+                        Technocrats Institute of Technology, Bhopal - A premier institution for engineering education in Central India.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap5-8">
+                    <div class="mb-6 md:mb-0">
+                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-blue-200 hover:text-white">Home</a></li>
+                            <li><a href="#about" class="text-blue-200 hover:text-white">About</a></li>
+                            <li><a href="#departments" class="text-blue-200 hover:text-white">Departments</a></li>
+                            <li><a href="#notice" class="text-blue-200 hover:text-white">Notices</a></li>
+                            <li><a href="#contact" class="text-blue-200 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-6 md:mb-0">
+                        <h4 class="text-lg font-bold mb-4">Information</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Admissions</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Results</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Syllabus</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Gallery</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-blue-200 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Terms of Use</a></li>
+                            <li><a href="#" class="text-blue-200 hover:text-white">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-6 text-center text-blue-200">
+                <p>&copy; 2023 Technocrats Institute of Technology, Bhopal. All Rights Reserved.</p>
+                <p class="mt-2 text-sm">Created by @code.monu</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg w-full max-w-md">
+            <div class="flex justify-between items-center border-b px-6 py-4">
+                <h3 id="payment-title" class="text-xl font-bold"></h3>
+                <button onclick="closePaymentModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div id="payment-details" class="mb-6"></div>
+                <h4 class="font-medium mb-3">Select Payment Method:</h4>
+                <div class="space-y-3">
+                    <button class="w-full flex items-center justify-between bg-gray-100 hover:bg-gray-200 rounded-lg p-4">
+                        <span class="flex items-center">
+                            <i class="fas fa-university text-blue-600 mr-3"></i>
+                            Net Banking
+                        </span>
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
+                    <button class="w-full flex items-center justify-between bg-gray-100 hover:bg-gray-200 rounded-lg p-4">
+                        <span class="flex items-center">
+                            <i class="fab fa-cc-visa text-blue-600 mr-3"></i>
+                            Credit/Debit Card
+                        </span>
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
+                    <button class="w-full flex items-center justify-between bg-gray-100 hover:bg-gray-200 rounded-lg p-4">
+                        <span class="flex items-center">
+                            <i class="fas fa-mobile-alt text-blue-600 mr-3"></i>
+                            UPI Payment
+                        </span>
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
+                    <button class="w-full flex items-center justify-between bg-gray-100 hover:bg-gray-200 rounded-lg p-4">
+                        <span class="flex items-center">
+                            <i class="fas fa-wallet text-blue-600 mr-3"></i>
+                            Wallet Payment
+                        </span>
+                        <i class="fas fa-chevron-right text-gray-500"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Button -->
+    <div id="chatbot-btn" class="fixed bottom-6 right-6 bg-blue-900 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg cursor-pointer hover:bg-blue-700 transition-all">
+        <i class="fas fa-comment-dots text-2xl"></i>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbot-modal" class="hidden fixed bottom-24 right-6 w-80 bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
+        <div class="bg-blue-900 text-white px-4 py-3 font-bold">TIT Bhopal Assistant</div>
+        <div id="chat-messages" class="p-4 h-64 overflow-y-auto bg-gray-50"></div>
+        <div class="border-t border-gray-200 p-3">
+            <input type="text" id="chat-input" placeholder="Type your question..." class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500">
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Auto-hide mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Active nav link highlight
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a, #mobileMenu a');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop - 100 && 
+                    window.pageYOffset < sectionTop + sectionHeight - 100) {
+                    const id = section.getAttribute('id');
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-blue-200');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('text-blue-200');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Chatbot functionality
+        const chatbotBtn = document.getElementById('chatbot-btn');
+        const chatbotModal = document.getElementById('chatbot-modal');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+
+        chatbotBtn.addEventListener('click', () => {
+            chatbotModal.classList.toggle('hidden');
+        });
+
+        // Simple auto-responses
+        const faqs = {
+            "fees": "Semester fees: ₹45,000, Hostel fees: ₹25,000/semester, Transport fees: ₹12,000/semester",
+            "uniform": "College uniform is compulsory. Purchase from Krishna Textiles in campus. 2 pairs of shirts & trousers included in fees.",
+            "library": "Library hours: 8AM-8PM (Mon-Sat). You can borrow up to 3 books for 14 days at a time.",
+            "bus": "Bus routes cover all major city areas. Fees vary by distance (₹5000-12000/semester). Get pass from transport office in Admin block."
+        };
+
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const message = chatInput.value.trim().toLowerCase();
+                chatInput.value = '';
+                
+                if (!message) return;
+                
+                // Add user message
+                chatMessages.innerHTML += `<div class="text-right mb-2"><span class="bg-blue-200 text-blue-900 rounded-lg px-3 py-1 inline-block">${message}</span></div>`;
+                
+                // Bot response
+                let response = "I'm still learning. Please contact college office for detailed queries.";
+                Object.keys(faqs).forEach(key => {
+                    if (message.includes(key)) {
+                        response = faqs[key];
+                    }
+                });
+                
+                setTimeout(() => {
+                    chatMessages.innerHTML += `<div class="text-left mb-2"><span class="bg-gray-200 text-gray-800 rounded-lg px-3 py-1 inline-block">${response}</span></div>`;
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 500);
+            }
+        });
+
+        // Payment Modal Functions
+        const paymentDetails = {
+            'semester': {
+                title: 'Semester Fee Payment',
+                description: '₹45,000 - Pay your semester tuition fees including all academic charges.'
+            },
+            'hostel': {
+                title: 'Hostel Fee Payment',
+                description: '₹25,000 - Includes accommodation, mess charges and maintenance fees.'
+            },
+            'transport': { 
+                title: 'Transport Fee Payment',
+                description: '₹12,000 - College bus service for the semester covering all routes.'
+            },
+            'uniform': {
+                title: 'Uniform Payment',
+                description: '₹2,800 - Official college uniform package (2 sets included)'
+            }
+        };
+
+        function openPaymentModal(type) {
+            document.getElementById('payment-title').textContent = paymentDetails[type].title;
+            document.getElementById('payment-details').innerHTML = `
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                    <p class="text-blue-700">${paymentDetails[type].description}</p>
+                </div>
+            `;
+            document.getElementById('payment-modal').classList.remove('hidden');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('payment-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
